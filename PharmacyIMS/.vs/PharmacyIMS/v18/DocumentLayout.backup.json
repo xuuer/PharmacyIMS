@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\zml17\\Desktop\\212306301-\u66FE\u94ED\u9F99\\PharmacyIMS\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|PharmacyIMS.csproj|c:\\users\\zml17\\desktop\\212306301-\u66FE\u94ED\u9F99\\pharmacyims\\viewmodels\\purchaseeditviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|PharmacyIMS.csproj|solutionrelative:viewmodels\\purchaseeditviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|PharmacyIMS.csproj|c:\\users\\zml17\\desktop\\212306301-\u66FE\u94ED\u9F99\\pharmacyims\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|PharmacyIMS.csproj|solutionrelative:viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|PharmacyIMS.csproj|c:\\users\\zml17\\desktop\\212306301-\u66FE\u94ED\u9F99\\pharmacyims\\viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|PharmacyIMS.csproj|solutionrelative:viewmodels\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|PharmacyIMS.csproj|c:\\users\\zml17\\desktop\\212306301-\u66FE\u94ED\u9F99\\pharmacyims\\migrations\\20260708132143_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}|PharmacyIMS.csproj|solutionrelative:migrations\\20260708132143_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PurchaseEditViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\zml17\\Desktop\\212306301-\u66FE\u94ED\u9F99\\PharmacyIMS\\ViewModels\\PurchaseEditViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\PurchaseEditViewModel.cs",
+              "ToolTip": "C:\\Users\\zml17\\Desktop\\212306301-\u66FE\u94ED\u9F99\\PharmacyIMS\\ViewModels\\PurchaseEditViewModel.cs",
+              "RelativeToolTip": "ViewModels\\PurchaseEditViewModel.cs",
+              "ViewState": "AgIAAMoAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-09T02:58:52.085Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\zml17\\Desktop\\212306301-\u66FE\u94ED\u9F99\\PharmacyIMS\\ViewModels\\MainViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\MainViewModel.cs",
+              "ToolTip": "C:\\Users\\zml17\\Desktop\\212306301-\u66FE\u94ED\u9F99\\PharmacyIMS\\ViewModels\\MainViewModel.cs",
+              "RelativeToolTip": "ViewModels\\MainViewModel.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAzwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-09T02:58:01.662Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\zml17\\Desktop\\212306301-\u66FE\u94ED\u9F99\\PharmacyIMS\\ViewModels\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\LoginViewModel.cs",
+              "ToolTip": "C:\\Users\\zml17\\Desktop\\212306301-\u66FE\u94ED\u9F99\\PharmacyIMS\\ViewModels\\LoginViewModel.cs",
+              "RelativeToolTip": "ViewModels\\LoginViewModel.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAUwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-09T02:55:30.097Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "20260708132143_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\zml17\\Desktop\\212306301-\u66FE\u94ED\u9F99\\PharmacyIMS\\Migrations\\20260708132143_InitialCreate.cs",
+              "RelativeDocumentMoniker": "Migrations\\20260708132143_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\zml17\\Desktop\\212306301-\u66FE\u94ED\u9F99\\PharmacyIMS\\Migrations\\20260708132143_InitialCreate.cs",
+              "RelativeToolTip": "Migrations\\20260708132143_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-08T13:21:43.733Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

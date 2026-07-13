@@ -1,0 +1,80 @@
+<Window x:Class="PharmacyIMS.Views.MedicineEditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="{Binding WindowTitle}" Height="520" Width="520"
+        WindowStartupLocation="CenterOwner" ResizeMode="NoResize">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="药品编码：" VerticalAlignment="Center" Margin="0,6"/>
+        <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding Medicine.MedicineCode}" Height="28" Padding="4,2"/>
+
+        <TextBlock Grid.Row="0" Grid.Column="2" Text="药品名称：" VerticalAlignment="Center" Margin="10,6,0,6"/>
+        <TextBox Grid.Row="0" Grid.Column="3" Text="{Binding Medicine.MedicineName}" Height="28" Padding="4,2"/>
+
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="通用名：" VerticalAlignment="Center" Margin="0,6"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Medicine.GenericName}" Height="28" Padding="4,2"/>
+
+        <TextBlock Grid.Row="1" Grid.Column="2" Text="规格：" VerticalAlignment="Center" Margin="10,6,0,6"/>
+        <TextBox Grid.Row="1" Grid.Column="3" Text="{Binding Medicine.Specification}" Height="28" Padding="4,2"/>
+
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="剂型：" VerticalAlignment="Center" Margin="0,6"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding Medicine.DosageForm}" Height="28" Padding="4,2"/>
+
+        <TextBlock Grid.Row="2" Grid.Column="2" Text="生产厂家：" VerticalAlignment="Center" Margin="10,6,0,6"/>
+        <TextBox Grid.Row="2" Grid.Column="3" Text="{Binding Medicine.Manufacturer}" Height="28" Padding="4,2"/>
+
+        <TextBlock Grid.Row="3" Grid.Column="0" Text="批准文号：" VerticalAlignment="Center" Margin="0,6"/>
+        <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding Medicine.ApprovalNo}" Height="28" Padding="4,2"/>
+
+        <TextBlock Grid.Row="3" Grid.Column="2" Text="处方类型：" VerticalAlignment="Center" Margin="10,6,0,6"/>
+        <ComboBox Grid.Row="3" Grid.Column="3" ItemsSource="{Binding PrescriptionTypes}" SelectedItem="{Binding Medicine.PrescriptionType}" Height="28"/>
+
+        <TextBlock Grid.Row="4" Grid.Column="0" Text="分类：" VerticalAlignment="Center" Margin="0,6"/>
+        <ComboBox Grid.Row="4" Grid.Column="1" ItemsSource="{Binding Categories}" DisplayMemberPath="CategoryName"
+                  SelectedValuePath="Id" SelectedValue="{Binding Medicine.CategoryId}" Height="28"/>
+
+        <TextBlock Grid.Row="4" Grid.Column="2" Text="有效期：" VerticalAlignment="Center" Margin="10,6,0,6"/>
+        <DatePicker Grid.Row="4" Grid.Column="3" SelectedDate="{Binding Medicine.ExpiryDate}" Height="28"/>
+
+        <TextBlock Grid.Row="5" Grid.Column="0" Text="进货价：" VerticalAlignment="Center" Margin="0,6"/>
+        <TextBox Grid.Row="5" Grid.Column="1" Text="{Binding Medicine.PurchasePrice}" Height="28" Padding="4,2"/>
+
+        <TextBlock Grid.Row="5" Grid.Column="2" Text="销售价：" VerticalAlignment="Center" Margin="10,6,0,6"/>
+        <TextBox Grid.Row="5" Grid.Column="3" Text="{Binding Medicine.SalePrice}" Height="28" Padding="4,2"/>
+
+        <TextBlock Grid.Row="6" Grid.Column="0" Text="库存数量：" VerticalAlignment="Center" Margin="0,6"/>
+        <TextBox Grid.Row="6" Grid.Column="1" Text="{Binding Medicine.StockQuantity}" Height="28" Padding="4,2"/>
+
+        <TextBlock Grid.Row="6" Grid.Column="2" Text="预警下限：" VerticalAlignment="Center" Margin="10,6,0,6"/>
+        <TextBox Grid.Row="6" Grid.Column="3" Text="{Binding Medicine.StockAlertLevel}" Height="28" Padding="4,2"/>
+
+        <TextBlock Grid.Row="7" Grid.Column="0" Text="备注：" VerticalAlignment="Top" Margin="0,6"/>
+        <TextBox Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="3" Text="{Binding Medicine.Remark}" Height="60"
+                 TextWrapping="Wrap" AcceptsReturn="True" Padding="4,2"/>
+
+        <StackPanel Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="4" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20,0,0">
+            <Button Content="保存" Width="100" Height="34" Background="#27AE60" Foreground="White" BorderThickness="0"
+                    Command="{Binding SaveCommand}" Margin="0,0,10,0"/>
+            <Button Content="取消" Width="100" Height="34" Background="#95A5A6" Foreground="White" BorderThickness="0"
+                    Command="{Binding CancelCommand}"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,53 @@
+<UserControl x:Class="PharmacyIMS.Views.MedicineListView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d">
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0,0,0,8">
+            <Button Content="➕ 新增药品" Width="110" Height="32" FontSize="14" Background="#27AE60" Foreground="White"
+                    BorderThickness="0" Cursor="Hand" Command="{Binding AddCommand}"/>
+            <Button Content="✏ 编辑" Width="90" Height="32" Margin="10,0,0,0" FontSize="14" Background="#3498DB"
+                    Foreground="White" BorderThickness="0" Cursor="Hand" Command="{Binding EditCommand}"/>
+            <Button Content="🗑 删除" Width="90" Height="32" Margin="10,0,0,0" FontSize="14" Background="#E74C3C"
+                    Foreground="White" BorderThickness="0" Cursor="Hand" Command="{Binding DeleteCommand}"/>
+        </StackPanel>
+
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0,0,0,10">
+            <TextBox Width="220" Height="32" Padding="6,4" FontSize="14" VerticalAlignment="Center"
+                     Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}"/>
+            <TextBlock Text="分类：" VerticalAlignment="Center" Margin="12,0,4,0" FontSize="14"/>
+            <ComboBox Width="120" Height="32" FontSize="14" VerticalContentAlignment="Center"
+                      ItemsSource="{Binding Categories}" DisplayMemberPath="CategoryName" SelectedItem="{Binding SelectedCategory}"/>
+            <TextBlock Text="类型：" VerticalAlignment="Center" Margin="12,0,4,0" FontSize="14"/>
+            <ComboBox Width="120" Height="32" FontSize="14" VerticalContentAlignment="Center"
+                      ItemsSource="{Binding TypeList}" DisplayMemberPath="Text" SelectedItem="{Binding SelectedType}"/>
+            <Button Content="🔍 搜索" Width="80" Height="32" Margin="8,0,0,0" FontSize="14" Command="{Binding SearchCommand}"/>
+        </StackPanel>
+
+        <TextBlock DockPanel.Dock="Bottom" Margin="0,8,0,0" FontSize="13" Foreground="#7F8C8D">
+            <Run Text="共"/>
+            <Run Text="{Binding MedicineCount}"/>
+            <Run Text="种药品"/>
+        </TextBlock>
+
+        <DataGrid AutoGenerateColumns="False" IsReadOnly="True" CanUserAddRows="False"
+                  SelectionMode="Single" AlternatingRowBackground="#F5F7FA"
+                  GridLinesVisibility="Horizontal" HeadersVisibility="Column"
+                  ItemsSource="{Binding Medicines}" SelectedItem="{Binding SelectedMedicine}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="药品编码" Width="90" Binding="{Binding MedicineCode}"/>
+                <DataGridTextColumn Header="药品名称" Width="*" Binding="{Binding MedicineName}"/>
+                <DataGridTextColumn Header="通用名" Width="*" Binding="{Binding GenericName}"/>
+                <DataGridTextColumn Header="规格" Width="100" Binding="{Binding Specification}"/>
+                <DataGridTextColumn Header="分类" Width="90" Binding="{Binding Category.CategoryName}"/>
+                <DataGridTextColumn Header="类型" Width="90" Binding="{Binding PrescriptionType}"/>
+                <DataGridTextColumn Header="库存" Width="60" Binding="{Binding StockQuantity}"/>
+                <DataGridTextColumn Header="进货价" Width="80" Binding="{Binding PurchasePrice,StringFormat={}{0:N2}}"/>
+                <DataGridTextColumn Header="销售价" Width="80" Binding="{Binding SalePrice,StringFormat={}{0:N2}}"/>
+                <DataGridTextColumn Header="有效期" Width="100" Binding="{Binding ExpiryDate,StringFormat={}{0:yyyy-MM-dd}}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </DockPanel>
+</UserControl>

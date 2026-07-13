@@ -1,0 +1,75 @@
+<Window x:Class="PharmacyIMS.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="惠民药店 药品进销存管理系统" Height="640" Width="1100">
+
+    <Window.Resources>
+        <Style x:Key="NavButton" TargetType="Button">
+            <Setter Property="Height" Value="48"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="Padding" Value="22,0,0,0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#58D68D"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <BooleanToVisibilityConverter x:Key="BoolToVis"/>
+    </Window.Resources>
+
+    <DockPanel>
+        <Border DockPanel.Dock="Top" Background="#1E8449" Height="56">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Column="0" Text="惠民药店 药品进销存管理系统" Foreground="White"
+                           FontSize="18" FontWeight="Bold" VerticalAlignment="Center" Margin="20,0,0,0"/>
+
+                <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,16,0">
+                    <TextBlock Text="当前用户：" Foreground="#A9DFBF" VerticalAlignment="Center"/>
+                    <TextBlock Text="{Binding CurrentUserName}" Foreground="White" FontWeight="Bold" VerticalAlignment="Center"/>
+                    <Button Content="退出" Width="64" Height="30" Margin="16,0,0,0" Background="#E74C3C" Foreground="White"
+                            BorderThickness="0" Cursor="Hand" Command="{Binding ExitCommand}"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <Border DockPanel.Dock="Left" Width="180" Background="#27AE60">
+            <StackPanel>
+                <Button Command="{Binding NavCommand}" Content="📋 药品管理" CommandParameter="Medicine" Style="{StaticResource NavButton}"/>
+                <Button Command="{Binding NavCommand}" Content="📥 采购入库" CommandParameter="Purchase" Style="{StaticResource NavButton}"
+                        Visibility="{Binding CanViewPurchase, Converter={StaticResource BoolToVis}}"/>
+                <Button Command="{Binding NavCommand}" Content="↩ 采购退货" CommandParameter="PurchaseReturn" Style="{StaticResource NavButton}"
+                        Visibility="{Binding CanViewPurchase, Converter={StaticResource BoolToVis}}"/>
+                <Button Command="{Binding NavCommand}" Content="📤 销售出库" CommandParameter="Sale" Style="{StaticResource NavButton}"
+                        Visibility="{Binding CanViewSale, Converter={StaticResource BoolToVis}}"/>
+                <Button Command="{Binding NavCommand}" Content="↩ 销售退货" CommandParameter="SaleReturn" Style="{StaticResource NavButton}"
+                        Visibility="{Binding CanViewSale, Converter={StaticResource BoolToVis}}"/>
+                <Button Command="{Binding NavCommand}" Content="📦 库存查询" CommandParameter="Inventory" Style="{StaticResource NavButton}"/>
+                <Button Command="{Binding NavCommand}" Content="🏭 供应商管理" CommandParameter="Supplier" Style="{StaticResource NavButton}"
+                        Visibility="{Binding CanViewSupplier, Converter={StaticResource BoolToVis}}"/>
+                <Button Command="{Binding NavCommand}" Content="📊 统计看板" CommandParameter="Dashboard" Style="{StaticResource NavButton}"
+                        Visibility="{Binding CanViewDashboard, Converter={StaticResource BoolToVis}}"/>
+                <Button Command="{Binding NavCommand}" Content="👤 用户管理" CommandParameter="User" Style="{StaticResource NavButton}"
+                        Visibility="{Binding CanViewUser, Converter={StaticResource BoolToVis}}"/>
+            </StackPanel>
+        </Border>
+
+        <Border Background="#ECF0F1">
+            <ContentControl Content="{Binding CurrentView}" Margin="20" FontSize="16"
+                            HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        </Border>
+    </DockPanel>
+</Window>
